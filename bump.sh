@@ -28,6 +28,3 @@ git push origin main
 
 # Push tag
 git push origin $VERSION
-
-# Publish pod to specs repo
-pod repo push father --allow-warnings
