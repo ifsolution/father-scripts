@@ -45,11 +45,11 @@ mv "IO/__DAD__IOInterface.swift" "IO/${NO_PREFIX_NAME}IOInterface.swift"
 echo "👉 Renmame Module Integration"
 
 sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__BoardProducer.swift"
-sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__ModuleLoader.swift"
+# sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__ModuleLoader.swift"
 sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__ModulePlugin.swift"
 
 mv "Sources/Integration/__DAD__BoardProducer.swift" "Sources/Integration/${NO_PREFIX_NAME}BoardProducer.swift"
-mv "Sources/Integration/__DAD__ModuleLoader.swift" "Sources/Integration/${NO_PREFIX_NAME}ModuleLoader.swift"
+# mv "Sources/Integration/__DAD__ModuleLoader.swift" "Sources/Integration/${NO_PREFIX_NAME}ModuleLoader.swift"
 mv "Sources/Integration/__DAD__ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
 
 echo "✅ Initialized $NAME module successfully!"
