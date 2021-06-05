@@ -35,21 +35,21 @@ echo "👉 Renmame IO Interface"
 
 NO_PREFIX_NAME=$(sed "s/$PREFIX//g" <<<"$NAME")
 
-sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "IO/__DAD__IOInterface.swift"
+sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/___VARIABLE_moduleName___IOInterface.swift"
 
 VAR="$(tr '[:upper:]' '[:lower:]' <<<${NO_PREFIX_NAME:0:1})${NO_PREFIX_NAME:1}"
-sed -i '' "s/__dad__/${VAR}/g" "IO/__DAD__IOInterface.swift"
+sed -i '' "s/<#mod name var#>/${VAR}/g" "IO/___VARIABLE_moduleName___IOInterface.swift"
 
-mv "IO/__DAD__IOInterface.swift" "IO/${NO_PREFIX_NAME}IOInterface.swift"
+mv "IO/___VARIABLE_moduleName___IOInterface.swift" "IO/${NO_PREFIX_NAME}IOInterface.swift"
 
 echo "👉 Renmame Module Integration"
 
-sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__BoardProducer.swift"
+sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration/___VARIABLE_moduleName___BoardProducer.swift"
 # sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__ModuleLoader.swift"
-sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__ModulePlugin.swift"
+sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift"
 
-mv "Sources/Integration/__DAD__BoardProducer.swift" "Sources/Integration/${NO_PREFIX_NAME}BoardProducer.swift"
+mv "Sources/Integration/___VARIABLE_moduleName___BoardProducer.swift" "Sources/Integration/${NO_PREFIX_NAME}BoardProducer.swift"
 # mv "Sources/Integration/__DAD__ModuleLoader.swift" "Sources/Integration/${NO_PREFIX_NAME}ModuleLoader.swift"
-mv "Sources/Integration/__DAD__ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
+mv "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
 
 echo "✅ Initialized $NAME module successfully!"
