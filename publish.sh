@@ -3,5 +3,7 @@ set -e
 
 VERSION=$1
 
-sh scripts/bump.sh $VERSION
-sh scripts/push-spec.sh
+SCRIPTS_DIR="$(dirname "$0")"
+
+sh $SCRIPTS_DIR/bump.sh $VERSION
+sh $SCRIPTS_DIR/push-spec.sh
