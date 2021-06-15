@@ -46,11 +46,11 @@ mv "IO/___VARIABLE_moduleName___InOut.swift" "IO/${NO_PREFIX_NAME}InOut.swift"
 
 echo "👉 Renmame Module Integration"
 
-sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration/___VARIABLE_moduleName___BoardProducer.swift"
+# sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration/___VARIABLE_moduleName___BoardProducer.swift"
 # sed -i '' "s/__DAD__/${NO_PREFIX_NAME}/g" "Sources/Integration/__DAD__ModuleLoader.swift"
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift"
 
-mv "Sources/Integration/___VARIABLE_moduleName___BoardProducer.swift" "Sources/Integration/${NO_PREFIX_NAME}BoardProducer.swift"
+# mv "Sources/Integration/___VARIABLE_moduleName___BoardProducer.swift" "Sources/Integration/${NO_PREFIX_NAME}BoardProducer.swift"
 # mv "Sources/Integration/__DAD__ModuleLoader.swift" "Sources/Integration/${NO_PREFIX_NAME}ModuleLoader.swift"
 mv "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
 
