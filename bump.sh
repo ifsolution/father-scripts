@@ -21,10 +21,13 @@ git commit -m "Bump version to $VERSION"
 git tag -f $VERSION
 
 # Delete legacy tag if needed
-git push origin :refs/tags/$VERSION
+# git push origin :refs/tags/$VERSION
+
+git push
+git push --tags
 
 # Push changes
-git push origin main
+# git push origin main
 
 # Push tag
-git push origin $VERSION
+# git push origin $VERSION
