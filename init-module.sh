@@ -55,4 +55,6 @@ sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/
 
 mv "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
 
+mv "Sources/Resources/___VARIABLE_moduleName___.strings" "Sources/Resources/${NO_PREFIX_NAME}.strings"
+
 echo "✅ Initialized $NAME module successfully!"
