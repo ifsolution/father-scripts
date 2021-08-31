@@ -31,6 +31,9 @@ sed -i '' "s/__DAD__/${NAME}/g" "__DAD__IO.podspec"
 mv __DAD__.podspec "${NAME}.podspec"
 mv __DAD__IO.podspec "${NAME}IO.podspec"
 
+mv "Sources/Resources/__DAD__.strings" "Sources/Resources/${NAME}.strings"
+mv "Sources/Resources/__DAD__.xcassets" "Sources/Resources/${NAME}.xcassets"
+
 sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/Root/RootBoard.swift"
 sed -i '' "s/__DAD__/${NAME}/g" "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift"
 
@@ -54,7 +57,5 @@ sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/Root/RootBoard.swift"
 
 mv "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
-
-mv "Sources/Resources/___VARIABLE_moduleName___.strings" "Sources/Resources/${NO_PREFIX_NAME}.strings"
 
 echo "✅ Initialized $NAME module successfully!"
