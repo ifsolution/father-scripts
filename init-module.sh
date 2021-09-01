@@ -43,12 +43,14 @@ NO_PREFIX_NAME=$(sed "s/$PREFIX//g" <<<"$NAME")
 
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Interface/___VARIABLE_moduleName___IOInterface.swift"
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Interface/___VARIABLE_moduleName___InOut.swift"
+sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Shared/___VARIABLE_moduleName___Namespace.swift"
 
 # VAR="$(tr '[:upper:]' '[:lower:]' <<<${NO_PREFIX_NAME:0:1})${NO_PREFIX_NAME:1}"
 # sed -i '' "s/<#mod name var#>/${VAR}/g" "IO/___VARIABLE_moduleName___IOInterface.swift"
 
 mv "IO/Interface/___VARIABLE_moduleName___IOInterface.swift" "IO/Interface/${NO_PREFIX_NAME}IOInterface.swift"
 mv "IO/Interface/___VARIABLE_moduleName___InOut.swift" "IO/Interface/${NO_PREFIX_NAME}InOut.swift"
+mv "IO/Shared/___VARIABLE_moduleName___Namespace.swift" "IO/Shared/${NO_PREFIX_NAME}Namespace.swift"
 
 echo "👉 Renmame Module Integration"
 
