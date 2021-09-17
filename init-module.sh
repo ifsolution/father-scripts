@@ -17,7 +17,7 @@ fi
 echo "● Module name set to $NAME"
 echo "● Module prefix set to $PREFIX"
 
-git clone git@github.com:ifsolution/module-structure-template.git
+git clone https://github.com/ifsolution/module-structure-template.git
 
 rm -rf module-structure-template/.git
 cp -r module-structure-template/ .
