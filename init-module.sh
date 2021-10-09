@@ -34,7 +34,7 @@ mv __DAD__IO.podspec "${NAME}IO.podspec"
 mv "Sources/Resources/__DAD__.strings" "Sources/Resources/${NAME}.strings"
 mv "Sources/Resources/__DAD__.xcassets" "Sources/Resources/${NAME}.xcassets"
 
-sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/Root/RootBoard.swift"
+sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/CombineFlows/RootBoard.swift"
 sed -i '' "s/__DAD__/${NAME}/g" "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift"
 
 echo "👉 Renmame no-prefix name"
@@ -56,7 +56,7 @@ echo "👉 Renmame Module Integration"
 
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift"
 
-sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/Root/RootBoard.swift"
+sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/CombineFlows/RootBoard.swift"
 
 mv "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
 
