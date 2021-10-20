@@ -31,7 +31,8 @@ sed -i '' "s/__DAD__/${NAME}/g" "__DAD__IO.podspec"
 mv __DAD__.podspec "${NAME}.podspec"
 mv __DAD__IO.podspec "${NAME}IO.podspec"
 
-mv "Sources/Resources/__DAD__.strings" "Sources/Resources/${NAME}.strings"
+mv "Sources/Resources/en.lproj/__DAD__.strings" "Sources/Resources/en.lproj/${NAME}.strings"
+mv "Sources/Resources/vi.lproj/__DAD__.strings" "Sources/Resources/vi.lproj/${NAME}.strings"
 mv "Sources/Resources/__DAD__.xcassets" "Sources/Resources/${NAME}.xcassets"
 
 sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/CombineFlows/RootBoard.swift"
