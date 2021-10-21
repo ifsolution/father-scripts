@@ -4,4 +4,4 @@ set -ex
 
 gem install cocoapods-sync-podspecs
 
-pod repo add father git@github.com:ifsolution/father-specs.git
+pod repo add father https://github.com/ifsolution/father-specs.git
