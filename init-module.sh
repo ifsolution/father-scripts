@@ -35,8 +35,8 @@ mv "Sources/Resources/en.lproj/__DAD__.strings" "Sources/Resources/en.lproj/${NA
 mv "Sources/Resources/vi.lproj/__DAD__.strings" "Sources/Resources/vi.lproj/${NAME}.strings"
 mv "Sources/Resources/__DAD__.xcassets" "Sources/Resources/${NAME}.xcassets"
 
-# sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/CombineFlows/RootBoard.swift"
-sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/CombineFlows/RootInOut.swift"
+sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/CombineFlows/___VARIABLE_moduleName___Board.swift"
+# sed -i '' "s/__DAD__/${NAME}/g" "Sources/Components/CombineFlows/___VARIABLE_moduleName___InOut.swift"
 sed -i '' "s/__DAD__/${NAME}/g" "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift"
 
 echo "👉 Renmame no-prefix name"
@@ -57,9 +57,10 @@ mv "IO/Shared/___VARIABLE_moduleName___ID.swift" "IO/Shared/${NO_PREFIX_NAME}ID.
 echo "👉 Renmame Module Integration"
 
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift"
-# sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/CombineFlows/RootBoard.swift"
-sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/CombineFlows/RootInOut.swift"
+sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/CombineFlows/___VARIABLE_moduleName___Board.swift"
+# sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/CombineFlows/RootInOut.swift"
 
 mv "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
+mv "Sources/Components/CombineFlows/___VARIABLE_moduleName___Board.swift" "Sources/Components/CombineFlows/${NO_PREFIX_NAME}Board.swift"
 
 echo "✅ Initialized $NAME module successfully!"
