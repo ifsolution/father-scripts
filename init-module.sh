@@ -11,7 +11,7 @@ if [ -z $NAME ]; then
 fi
 
 if [ -z $PREFIX ]; then
-    PREFIX="Dad"
+    PREFIX="DAD"
 fi
 
 echo "● Module name set to $NAME"
