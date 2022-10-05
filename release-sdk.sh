@@ -22,7 +22,7 @@ else
     # publish new version
     pod repo bump $VERSION
 
-    git submodule foreach git tag $version
+    git submodule foreach git tag $VERSION
     git submodule foreach git push origin --tags
 
     pod repo sync father
