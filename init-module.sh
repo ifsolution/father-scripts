@@ -45,10 +45,13 @@ NO_PREFIX_NAME=$(sed "s/$PREFIX//g" <<<"$NAME")
 
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Interface/___VARIABLE_moduleName___IOInterface.swift"
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Interface/___VARIABLE_moduleName___InOut.swift"
+
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
+sed -i '' "s/__DAD__/${NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
+sed -i '' "s/___VARIABLE_serviceMap___/mod${NAME}IO/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
 
 VAR_MOD_NAME="$(tr '[:upper:]' '[:lower:]' <<<${NO_PREFIX_NAME:0:1})${NO_PREFIX_NAME:1}"
-sed -i '' "s/___VARIABLE_serviceMap___/${VAR_MOD_NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
+# sed -i '' "s/___VARIABLE_serviceMap___/${VAR_MOD_NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
 
 mv "IO/Interface/___VARIABLE_moduleName___IOInterface.swift" "IO/Interface/${NO_PREFIX_NAME}IOInterface.swift"
 mv "IO/Interface/___VARIABLE_moduleName___InOut.swift" "IO/Interface/${NO_PREFIX_NAME}InOut.swift"
