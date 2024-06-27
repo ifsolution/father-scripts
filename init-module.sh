@@ -25,11 +25,11 @@ rm -rf module-structure-template
 
 echo "👉 Renmame module name"
 
+sed -i '' "s/__DAD__/${NAME}/g" "__DAD__Plugins.podspec"
 sed -i '' "s/__DAD__/${NAME}/g" "__DAD__.podspec"
-sed -i '' "s/__DAD__/${NAME}/g" "__DAD__IO.podspec"
 
 mv __DAD__.podspec "${NAME}.podspec"
-mv __DAD__IO.podspec "${NAME}IO.podspec"
+mv __DAD__Plugins.podspec "${NAME}Plugins.podspec"
 
 mv "Sources/Resources/en.lproj/__DAD__.strings" "Sources/Resources/en.lproj/${NAME}.strings"
 mv "Sources/Resources/vi.lproj/__DAD__.strings" "Sources/Resources/vi.lproj/${NAME}.strings"
@@ -48,7 +48,7 @@ sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Interface/___VAR
 
 sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
 sed -i '' "s/__DAD__/${NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
-sed -i '' "s/___VARIABLE_serviceMap___/mod${NAME}IO/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
+sed -i '' "s/___VARIABLE_serviceMap___/mod${NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
 
 VAR_MOD_NAME="$(tr '[:upper:]' '[:lower:]' <<<${NO_PREFIX_NAME:0:1})${NO_PREFIX_NAME:1}"
 # sed -i '' "s/___VARIABLE_serviceMap___/${VAR_MOD_NAME}/g" "IO/Shared/___VARIABLE_moduleName___ServiceMap.swift"
