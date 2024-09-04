@@ -25,7 +25,7 @@ else
     git submodule foreach git tag $VERSION
     git submodule foreach git push origin --tags
 
-    pod repo sync father
+    pod repo sync ifsolution-father-specs
 
     git submodule foreach git reset --hard
 

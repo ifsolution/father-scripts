@@ -4,8 +4,8 @@ set -e
 SPEC=$1
 
 if [ -z $SPEC ]; then
-    pod repo sync father # --allow-warnings
+    pod repo sync ifsolution-father-specs # --allow-warnings
 else
-    pod repo sync father $SPEC # --allow-warnings
+    pod repo sync ifsolution-father-specs $SPEC # --allow-warnings
 fi
 
