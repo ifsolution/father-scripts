@@ -66,4 +66,10 @@ sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}/g" "Sources/Components/
 mv "Sources/Integration/___VARIABLE_moduleName___ModulePlugin.swift" "Sources/Integration/${NO_PREFIX_NAME}ModulePlugin.swift"
 mv "Sources/Components/CombineFlows/___VARIABLE_moduleName___Board.swift" "Sources/Components/CombineFlows/${NO_PREFIX_NAME}Board.swift"
 
+sed -i '' "s/___VARIABLE_moduleName___/${NO_PREFIX_NAME}Plugins/g" "Sources/Components/___VARIABLE_moduleName___ServiceMap.swift"
+sed -i '' "s/__DAD__/${NAME}Plugins/g" "Sources/Components/___VARIABLE_moduleName___ServiceMap.swift"
+sed -i '' "s/___VARIABLE_serviceMap___/mod${NAME}Plugins/g" "Sources/Components/___VARIABLE_moduleName___ServiceMap.swift"
+
+mv "Sources/Components/___VARIABLE_moduleName___ServiceMap.swift" "Sources/Components/${NO_PREFIX_NAME}PluginsServiceMap.swift"
+
 echo "✅ Initialized $NAME module successfully!"
